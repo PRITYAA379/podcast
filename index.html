@@ -35,20 +35,36 @@
   <!-- Glitch Effect Overlay -->
   <div class="glitch-overlay"></div>
 
-  <audio id="vibration-sound" src="https://www.zapsplat.com/wp-content/uploads/2015/sounds/Vibration-Effect.mp3" preload="auto"></audio>
-  <audio id="touch-sound">
-    <source src="touch-sound.mp3" type="audio/mp3">
-  </audio>
+  <!-- Devotion Sound -->
+  <audio id="devotion-sound" src="path/to/your/devotion-sound.mp3" preload="auto"></audio>
 
   <script>
-    document.querySelector('.moon-container').addEventListener('click', function() {
-      // Play the vibration sound
-      document.getElementById('vibration-sound').play();
+    // Get the devotion sound element
+    const audio = document.getElementById('devotion-sound');
 
-      // Optional: Add other effects like vibration, etc.
+    // Get the moon element for interactive effect
+    const moon = document.querySelector('.moon-container');
+
+    // Play sound when hovering over the moon
+    moon.addEventListener('mouseover', () => {
+      // Play the audio when mouse is over the moon, if not already playing
+      if (audio.paused) {
+        audio.play();
+      }
+
+      // Interactive effect: Scale moon and adjust volume
+      moon.style.transform = 'scale(1.1)';
+      audio.volume = 0.7; // Adjust sound volume when focusing
+    });
+
+    // Reset interactive effect when mouse leaves the moon
+    moon.addEventListener('mouseout', () => {
+      moon.style.transform = 'scale(1)';
+      audio.volume = 0.5; // Reset sound volume
+      // Pause the audio when mouse leaves (optional)
+      audio.pause();
+      audio.currentTime = 0; // Reset the audio to start when hovered again
     });
   </script>
-
-  <script src="script.js"></script>
 </body>
 </html>
