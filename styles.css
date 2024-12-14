@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden; /* Prevent scrolling */
   margin: 0;
   flex-direction: column; /* Stack content vertically */
 }
@@ -37,7 +37,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  will-change: transform, opacity; /* Added for performance */
 }
 
 /* Moon (Glowing Effect) */
@@ -58,7 +58,6 @@ body {
   height: auto;
   border-radius: 50%;
   display: block;
-  z-index: 2;
 }
 
 /* Small Star near the Moon */
@@ -95,7 +94,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  z-index: 2;
   animation: textGlow 5s ease-in-out infinite;
 }
 
