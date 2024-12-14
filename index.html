@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guru's Light - eBooks by Prityaa379</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Heading at the Top -->
+  <div class="heading">
+    <h1>eBooks by Prityaa379</h1>
+  </div>
+
+  <div class="starry-background">
+    <!-- Moon Element with Image -->
+    <div class="moon-container" id="moon"<a href="https://www.amazon.in/dp/B0DP1BNT4D?binding=kindle_edition&qid=1734199288&sr=1-1&ref=dbs_dp_rwt_sb_pc_tkin" target="_blank">
+   <!-- Moon Image or Content Goes Here -->
+</a>
+onclick="playTouchSound()"><audio id="vibration-sound" src="https://www.zapsplat.com/wp-content/uploads/2015/sounds/Vibration-Effect.mp3" preload="auto"></audio>
+
+<script>
+  document.querySelector('.moon-container').addEventListener('click', function() {
+    // Play the vibration sound
+    document.getElementById('vibration-sound').play();
+
+    // Optional: Add other effects like vibration, etc.
+  });
+</script>
+
+
+      <div class="moon">
+        <a href="https://www.amazon.in/dp/B0DP1BNT4D?binding=kindle_edition&qid=1734199288&sr=1-1&ref=dbs_dp_rwt_sb_pc_tkin" target="_blank">
+          <img src="https://i.ibb.co/f0DgQCq/Untitled-design.jpg" alt="Service Showcase" class="moon-image">
+        </a>
+        <!-- Small Star near the Moon -->
+        <div class="star"></div>
+      </div>
+      <div class="moon-halo"></div>
+      <div class="moon-text"></div>
+    </div>
+
+    <!-- UFOs Flying in the Sky -->
+    <div class="ufo ufo-1"></div>
+    <div class="ufo ufo-2"></div>
+    <div class="ufo ufo-3"></div>
+    <div class="ufo ufo-4"></div>
+  </div>
+
+  <!-- Glitch Effect Overlay -->
+  <div class="glitch-overlay"></div>
+
+
+  <audio id="touch-sound">
+    <source src="touch-sound.mp3" type="audio/mp3">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
