@@ -14,28 +14,13 @@
 
   <div class="starry-background">
     <!-- Moon Element with Image -->
-    <div class="moon-container" id="moon"<a href="https://www.amazon.in/dp/B0DP1BNT4D?binding=kindle_edition&qid=1734199288&sr=1-1&ref=dbs_dp_rwt_sb_pc_tkin" target="_blank">
-   <!-- Moon Image or Content Goes Here -->
-</a>
-<audio id="vibration-sound" src="https://www.zapsplat.com/wp-content/uploads/2015/sounds/Vibration-Effect.mp3" preload="auto"></audio>
-
-<script>
-  document.querySelector('.moon-container').addEventListener('click', function() {
-    // Play the vibration sound
-    document.getElementById('vibration-sound').play();
-
-    // Optional: Add other effects like vibration, etc.
-  });
-</script>
-
-
-      <div class="moon">
-        <a href="https://www.amazon.in/dp/B0DP1BNT4D?binding=kindle_edition&qid=1734199288&sr=1-1&ref=dbs_dp_rwt_sb_pc_tkin" target="_blank">
-          <img src="https://i.ibb.co/f0DgQCq/Untitled-design.jpg" alt="Service Showcase" class="moon-image">
-        </a>
-        <!-- Small Star near the Moon -->
-        <div class="star"></div>
-      </div>
+    <div class="moon-container" id="moon">
+      <a href="https://www.amazon.in/dp/B0DP1BNT4D?binding=kindle_edition&qid=1734199288&sr=1-1&ref=dbs_dp_rwt_sb_pc_tkin" target="_blank">
+        <!-- Moon Image or Content Goes Here -->
+        <img src="https://i.ibb.co/f0DgQCq/Untitled-design.jpg" alt="Service Showcase" class="moon-image">
+      </a>
+      <!-- Small Star near the Moon -->
+      <div class="star"></div>
       <div class="moon-halo"></div>
       <div class="moon-text"></div>
     </div>
@@ -50,10 +35,19 @@
   <!-- Glitch Effect Overlay -->
   <div class="glitch-overlay"></div>
 
-
+  <audio id="vibration-sound" src="https://www.zapsplat.com/wp-content/uploads/2015/sounds/Vibration-Effect.mp3" preload="auto"></audio>
   <audio id="touch-sound">
     <source src="touch-sound.mp3" type="audio/mp3">
   </audio>
+
+  <script>
+    document.querySelector('.moon-container').addEventListener('click', function() {
+      // Play the vibration sound
+      document.getElementById('vibration-sound').play();
+
+      // Optional: Add other effects like vibration, etc.
+    });
+  </script>
 
   <script src="script.js"></script>
 </body>
